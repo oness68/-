@@ -1,7 +1,20 @@
-﻿  main.cpp
-D:\FUnrealCamp\언리얼 캠프 과제\2번 과제 CH 2 OOP Summary\2번 과제 CH 2 OOP Summary\main.cpp(8,12): warning C4244: '인수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\FUnrealCamp\언리얼 캠프 과제\2번 과제 CH 2 OOP Summary\2번 과제 CH 2 OOP Summary\main.cpp(32): warning C4715: 'createRandomAnimal': 모든 제어 경로에서 값을 반환하지는 않습니다.
-D:\FUnrealCamp\언리얼 캠프 과제\2번 과제 CH 2 OOP Summary\2번 과제 CH 2 OOP Summary\main.cpp(18): warning C4172: 지역 변수 또는 임시: dg의 주소를 반환하고 있습니다.
-D:\FUnrealCamp\언리얼 캠프 과제\2번 과제 CH 2 OOP Summary\2번 과제 CH 2 OOP Summary\main.cpp(23): warning C4172: 지역 변수 또는 임시: ct의 주소를 반환하고 있습니다.
-D:\FUnrealCamp\언리얼 캠프 과제\2번 과제 CH 2 OOP Summary\2번 과제 CH 2 OOP Summary\main.cpp(27): warning C4172: 지역 변수 또는 임시: cw의 주소를 반환하고 있습니다.
-  2번 과제 CH 2 OOP Summary.vcxproj -> D:\FUnrealCamp\언리얼 캠프 과제\2번 과제 CH 2 OOP Summary\x64\Debug\2번 과제 CH 2 OOP Summary.exe
+﻿  Animal.cpp
+  Zoo.cpp
+  main.cpp
+D:\FUnrealCamp\언리얼 캠프 과제\2번 과제 CH 2 OOP Summary\2번 과제 CH 2 OOP Summary\Zoo.cpp(8,23): error C2092: 'Target of operator new()' 배열 요소 형식은 함수 또는 추상 클래스 형식일 수 없습니다.
+D:\FUnrealCamp\언리얼 캠프 과제\2번 과제 CH 2 OOP Summary\2번 과제 CH 2 OOP Summary\Zoo.cpp(8,12): error C2259: 'Animal': 추상 클래스를 인스턴스화할 수 없습니다.
+      D:\FUnrealCamp\언리얼 캠프 과제\2번 과제 CH 2 OOP Summary\2번 과제 CH 2 OOP Summary\Animal.h(6,7):
+      'Animal' 선언을 참조하십시오.
+      D:\FUnrealCamp\언리얼 캠프 과제\2번 과제 CH 2 OOP Summary\2번 과제 CH 2 OOP Summary\Zoo.cpp(8,12):
+      다음 멤버가 원인입니다.
+      D:\FUnrealCamp\언리얼 캠프 과제\2번 과제 CH 2 OOP Summary\2번 과제 CH 2 OOP Summary\Zoo.cpp(8,12):
+      'void Animal::makeSound(void)': abstract입니다.
+      D:\FUnrealCamp\언리얼 캠프 과제\2번 과제 CH 2 OOP Summary\2번 과제 CH 2 OOP Summary\Animal.h(10,15):
+      'Animal::makeSound' 선언을 참조하십시오.
+  
+D:\FUnrealCamp\언리얼 캠프 과제\2번 과제 CH 2 OOP Summary\2번 과제 CH 2 OOP Summary\Zoo.cpp(19,35): error C2092: 'Target of operator new()' 배열 요소 형식은 함수 또는 추상 클래스 형식일 수 없습니다.
+D:\FUnrealCamp\언리얼 캠프 과제\2번 과제 CH 2 OOP Summary\2번 과제 CH 2 OOP Summary\Zoo.cpp(22,23): error C2092: 'Target of operator new()' 배열 요소 형식은 함수 또는 추상 클래스 형식일 수 없습니다.
+D:\FUnrealCamp\언리얼 캠프 과제\2번 과제 CH 2 OOP Summary\2번 과제 CH 2 OOP Summary\Zoo.cpp(35,36): error C2092: 'Target of operator new()' 배열 요소 형식은 함수 또는 추상 클래스 형식일 수 없습니다.
+D:\FUnrealCamp\언리얼 캠프 과제\2번 과제 CH 2 OOP Summary\2번 과제 CH 2 OOP Summary\Zoo.cpp(38,24): error C2092: 'Target of operator new()' 배열 요소 형식은 함수 또는 추상 클래스 형식일 수 없습니다.
+  코드를 생성하고 있습니다...
+D:\FUnrealCamp\언리얼 캠프 과제\2번 과제 CH 2 OOP Summary\2번 과제 CH 2 OOP Summary\main.cpp(22): warning C4715: 'createRandomAnimal': 모든 제어 경로에서 값을 반환하지는 않습니다.

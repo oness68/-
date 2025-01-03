@@ -3,14 +3,9 @@
 
 Zoo::Zoo()
 {
-	animalCount=0;
-	arraysize = Maxsize;
+	arraysize = 3;
 	fullAnimal = false;
-	for (int i = 0; i < Maxsize; i++)
-	{
-		animals[i] = nullptr;
-	}
-
+	animals = new Animal[arraysize];
 }
 
 void Zoo::addAnimal(Animal* animal)
@@ -21,24 +16,54 @@ void Zoo::addAnimal(Animal* animal)
 		return;
 	}
 		
-	this->animals[animalCount] = animal;
-	animalCount++;
+	Animal* tempanimals = new Animal[animalCount];
+	memcpy(tempanimals, animals, sizeof(Animal) * animalCount);
+	this->animalCount++;
+	animals = new Animal[animalCount];
+	memcpy(animals, tempanimals, sizeof(Animal) * (animalCount - 1));
+	memcpy(&animals[animalCount - 1], animal, sizeof(Animal));
 
 	if(animalCount == 10)
 		fullAnimal = true;
 
 }
 
+bool Zoo::DeleteAnimal()
+{
+	try
+	{
+		Animal* tempanimals = new Animal[animalCount];
+		memcpy(tempanimals, animals, sizeof(Animal) * animalCount - 1);
+		this->animalCount--;
+		animals = new Animal[animalCount];
+		memcpy(animals, tempanimals, sizeof(Animal) * (animalCount));
+
+
+		if (animalCount < 10)
+			fullAnimal = false;
+	}
+	catch (const std::exception&)
+	{
+		return false;
+	}
+	
+	return true;
+}
+
 void Zoo::performActions()
 {
 	for (int i = 0; i < animalCount; i++)//순서대로 출력
 	{
-		this->animals[i]->makeSound();
+		(&animals[i])->makeSound();
 	}
 
 }
 
 Zoo::~Zoo()
 {
+	
 	cout << "Zoo소멸" << endl;
+	
 }
+
+

@@ -8,7 +8,6 @@ class Animal
 
 public:
 	virtual void makeSound()=0;
-
 	~Animal() { cout << "Animal ¼Ò¸ê" << endl; }
 };
 
